@@ -36,7 +36,7 @@ func (obj *Int32) Add(delta int32) (new int32) {
 	return atomic.AddInt32(&obj.core, delta)
 }
 
-// @param delta 举例，传入3，则减3
+// delta 举例，传入3，则减3
 func (obj *Int32) Sub(delta int32) (new int32) {
 	return atomic.AddInt32(&obj.core, -delta)
 }
@@ -71,7 +71,7 @@ func (obj *Uint32) Add(delta uint32) (new uint32) {
 	return atomic.AddUint32(&obj.core, delta)
 }
 
-// @param delta 举例，传入3，则减3
+// delta 举例，传入3，则减3
 func (obj *Uint32) Sub(delta uint32) (new uint32) {
 	return atomic.AddUint32(&obj.core, ^uint32(delta-1))
 }

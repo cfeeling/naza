@@ -43,8 +43,8 @@ var defaultOption = Option{
 
 type ModOption func(option *Option)
 
-// @param dups: 每个实际的 node 转变成多少个环上的节点，必须大于等于1
-// @param modOptions: 可修改内部的哈希函数，比如替换成murmur32的开源实现，可以这样：
+// dups: 每个实际的 node 转变成多少个环上的节点，必须大于等于1
+// modOptions: 可修改内部的哈希函数，比如替换成murmur32的开源实现，可以这样：
 //   import "github.com/spaolacci/murmur3"
 //   import "github.com/cfeeling/naza/pkg/consistenthash"
 //

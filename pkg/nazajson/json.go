@@ -29,7 +29,7 @@ func (j *JSON) Init(raw []byte) error {
 }
 
 // 判断 json 中某个字段是否存在
-// @param path 支持多级格式，用句号`.`分隔，比如 log.level
+// path 支持多级格式，用句号`.`分隔，比如 log.level
 func (j *JSON) Exist(path string) bool {
 	return exist(j.m, path)
 }

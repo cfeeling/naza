@@ -14,9 +14,9 @@ import (
 	"net/http"
 )
 
-// @param url  地址
-// @param info 需要序列化的结构体
-// @param client 注意，如果为nil，则使用http.DefaultClient
+// url  地址
+// info 需要序列化的结构体
+// client 注意，如果为nil，则使用http.DefaultClient
 func PostJson(url string, info interface{}, client *http.Client) (*http.Response, error) {
 	j, err := json.Marshal(info)
 	if err != nil {

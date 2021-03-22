@@ -36,7 +36,7 @@ func (br *BitReader) ReadBit() (uint8, error) {
 	return br.readBit()
 }
 
-// @param n: 取值范围 [1, 8]
+// n: 取值范围 [1, 8]
 func (br *BitReader) ReadBits8(n uint) (r uint8, err error) {
 	var t uint8
 	for i := uint(0); i < n; i++ {
@@ -49,7 +49,7 @@ func (br *BitReader) ReadBits8(n uint) (r uint8, err error) {
 	return
 }
 
-// @param n: 取值范围 [1, 16]
+// n: 取值范围 [1, 16]
 func (br *BitReader) ReadBits16(n uint) (r uint16, err error) {
 	var t uint8
 	for i := uint(0); i < n; i++ {
@@ -62,7 +62,7 @@ func (br *BitReader) ReadBits16(n uint) (r uint16, err error) {
 	return
 }
 
-// @param n: 取值范围 [1, 32]
+// n: 取值范围 [1, 32]
 func (br *BitReader) ReadBits32(n uint) (r uint32, err error) {
 	var t uint8
 	for i := uint(0); i < n; i++ {
@@ -75,7 +75,7 @@ func (br *BitReader) ReadBits32(n uint) (r uint32, err error) {
 	return
 }
 
-// @param n: 取值范围 [1, 64]
+// n: 取值范围 [1, 64]
 func (br *BitReader) ReadBits64(n uint) (r uint64, err error) {
 	var t uint8
 	for i := uint(0); i < n; i++ {
@@ -88,7 +88,7 @@ func (br *BitReader) ReadBits64(n uint) (r uint64, err error) {
 	return
 }
 
-// @param n: 读取多少个字节
+// n: 读取多少个字节
 func (br *BitReader) ReadBytes(n uint) (r []byte, err error) {
 	var t uint8
 	for i := uint(0); i < n; i++ {
@@ -166,7 +166,7 @@ func NewBitWriter(b []byte) BitWriter {
 	}
 }
 
-// @param b: 当b不为0和1时，取b的最低位
+// b: 当b不为0和1时，取b的最低位
 func (bw *BitWriter) WriteBit(b uint8) {
 	if b&0x1 == 1 {
 		bw.core[bw.index] |= 1 << (7 - bw.pos)
@@ -181,7 +181,7 @@ func (bw *BitWriter) WriteBit(b uint8) {
 }
 
 // 将<v>的低<n>位写入
-// @param n: 取值范围 [1, 8]
+// n: 取值范围 [1, 8]
 func (bw *BitWriter) WriteBits8(n uint, v uint8) {
 	for i := n - 1; ; i-- {
 		bw.WriteBit(v >> i & 0x1)
@@ -204,13 +204,13 @@ func (bw *BitWriter) WriteBits16(n uint, v uint16) {
 
 // TODO chef: func GetBitX和func GetBitsX没有对写越界做检查，由调用方保证这一点，后续可能会加上检查
 
-// @param pos: 取值范围 [0, 7]，0表示最低位
+// pos: 取值范围 [0, 7]，0表示最低位
 func GetBit8(v uint8, pos uint) uint8 {
 	return GetBits8(v, pos, 1)
 }
 
-// @param pos: 取值范围 [0, 7]，0表示最低位
-// @param n:   取多少位， 取值范围 [1, 8]
+// pos: 取值范围 [0, 7]，0表示最低位
+// n:   取多少位， 取值范围 [1, 8]
 //
 // 举例，GetBits8(105, 2, 4) = 10（即1010）
 //   v: 0110 1001

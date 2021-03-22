@@ -14,7 +14,7 @@ import (
 )
 
 type Bitrate interface {
-	// @param nowUnixMSec: 变参，可选择从外部传入当前 unix 时间戳，单位毫秒
+	// nowUnixMSec: 变参，可选择从外部传入当前 unix 时间戳，单位毫秒
 	Add(bytes int, nowUnixMSec ...int64)
 
 	Rate(nowUnixMSec ...int64) float32

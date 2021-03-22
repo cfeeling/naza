@@ -49,7 +49,7 @@ func (obj *Uint64) Add(delta uint64) (new uint64) {
 	return
 }
 
-// @param delta 举例，传入3，则减3
+// delta 举例，传入3，则减3
 func (obj *Uint64) Sub(delta uint64) (new uint64) {
 	obj.mu.Lock()
 	obj.core += ^uint64(delta - 1)
@@ -117,7 +117,7 @@ func (obj *Int64) Add(delta int64) (new int64) {
 	return
 }
 
-// @param delta 举例，传入3，则减3
+// delta 举例，传入3，则减3
 func (obj *Int64) Sub(delta int64) (new int64) {
 	obj.mu.Lock()
 	obj.core += ^int64(delta - 1)

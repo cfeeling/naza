@@ -7,7 +7,7 @@ import (
 
 var ErrPKCS = errors.New("naza.crypto: fxxk")
 
-// @param blockSize 取值范围[0, 255]
+// blockSize 取值范围[0, 255]
 //                  如果是AES，见标准库中aes.BlockSize等于16
 func EncryptPKCS7(in []byte, blockSize int) []byte {
 	paddingLength := blockSize - len(in)%blockSize

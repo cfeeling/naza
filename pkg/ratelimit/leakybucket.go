@@ -24,7 +24,7 @@ type LeakyBucket struct {
 	lastTick int64
 }
 
-// @param intervalMSec 多长时间以上，允许获取到一个资源，单位毫秒
+// intervalMSec 多长时间以上，允许获取到一个资源，单位毫秒
 func NewLeakyBucket(intervalMSec int) *LeakyBucket {
 	return &LeakyBucket{
 		intervalMSec: int64(intervalMSec),

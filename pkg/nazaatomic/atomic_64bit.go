@@ -34,7 +34,7 @@ func (obj *Uint64) Add(delta uint64) (new uint64) {
 	return atomic.AddUint64(&obj.core, delta)
 }
 
-// @param delta 举例，传入3，则减3
+// delta 举例，传入3，则减3
 func (obj *Uint64) Sub(delta uint64) (new uint64) {
 	return atomic.AddUint64(&obj.core, ^uint64(delta-1))
 }
@@ -69,7 +69,7 @@ func (obj *Int64) Add(delta int64) (new int64) {
 	return atomic.AddInt64(&obj.core, delta)
 }
 
-// @param delta 举例，传入3，则减3
+// delta 举例，传入3，则减3
 func (obj *Int64) Sub(delta int64) (new int64) {
 	return atomic.AddInt64(&obj.core, -delta)
 }

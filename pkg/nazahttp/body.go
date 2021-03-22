@@ -18,9 +18,9 @@ import (
 
 // @brief 从http请求中解析body中的json字符串，并反序列化至结构体中
 //
-// @param r            http请求对象
-// @param info         输出参数，用于接收反序列化之后的数据
-// @param keyFieldList 可选参数，可指定一个或多个json中必须存在的字段
+// r            http请求对象
+// info         输出参数，用于接收反序列化之后的数据
+// keyFieldList 可选参数，可指定一个或多个json中必须存在的字段
 func UnmarshalRequestJsonBody(r *http.Request, info interface{}, keyFieldList ...string) error {
 	body, err := ioutil.ReadAll(r.Body)
 	if err != nil {
