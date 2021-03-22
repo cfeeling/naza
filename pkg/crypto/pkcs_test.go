@@ -3,7 +3,7 @@ package crypto
 import (
 	"testing"
 
-	"github.com/q191201771/naza/pkg/assert"
+	"github.com/cfeeling/naza/pkg/assert"
 )
 
 var (

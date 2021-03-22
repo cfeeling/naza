@@ -1,5 +1,5 @@
 // Copyright 2019, Chef.  All rights reserved.
-// https://github.com/q191201771/naza
+// https://github.com/cfeeling/naza
 //
 // Use of this source code is governed by a MIT-style license
 // that can be found in the License file.
@@ -14,8 +14,8 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/q191201771/naza/pkg/assert"
-	"github.com/q191201771/naza/pkg/nazalog"
+	"github.com/cfeeling/naza/pkg/assert"
+	"github.com/cfeeling/naza/pkg/nazalog"
 )
 
 func TestConsistentHash(t *testing.T) {

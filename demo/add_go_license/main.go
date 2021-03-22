@@ -1,5 +1,5 @@
 // Copyright 2019, Chef.  All rights reserved.
-// https://github.com/q191201771/naza
+// https://github.com/cfeeling/naza
 //
 // Use of this source code is governed by a MIT-style license
 // that can be found in the License file.
@@ -17,8 +17,8 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/q191201771/naza/pkg/filebatch"
-	"github.com/q191201771/naza/pkg/nazalog"
+	"github.com/cfeeling/naza/pkg/filebatch"
+	"github.com/cfeeling/naza/pkg/nazalog"
 )
 
 var licenseTmpl = `// Copyright %d, %s.  All rights reserved.
