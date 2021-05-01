@@ -1,5 +1,5 @@
 // Copyright 2021, Chef.  All rights reserved.
-// https://github.com/q191201771/naza
+// https://github.com/cfeeling/naza
 //
 // Use of this source code is governed by a MIT-style license
 // that can be found in the License file.
@@ -12,9 +12,9 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/q191201771/naza/pkg/unique"
+	"github.com/cfeeling/naza/pkg/unique"
 
-	"github.com/q191201771/naza/pkg/nazalog"
+	"github.com/cfeeling/naza/pkg/nazalog"
 )
 
 // 用于debug锁方面的问题
