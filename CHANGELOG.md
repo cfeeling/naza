@@ -1,3 +1,32 @@
+#### v0.18.5 (2021-04)
+
+- [feat] nazalog: 新增日志级别LevelTrace，目前已有trace, debug, info, warn, error, fatal, panic
+- [feat] nazalog: 新增日志级别LevelNothing，初始化成这个级别的Logger，不会打印任何内容
+- [feat] nazalog: 提供一个Logger实例DummyLogger，该实例不打印任何内容
+- [feat] nazalog: 新增SetGlobalLogger，业务方可以设置替换全局Logger
+- [feat] nazalog: 新增GetGlobalLogger，业务方可以获取全局Logger，比如将全局Logger赋值给其他Logger使用
+
+#### v0.18.4 (2021-04)
+
+- [feat] filesystemlayer: 新的包，提供一层文件操作的抽象，可以使用内存替换磁盘作为存储
+- [refactor] sync: Mutex中使用unique.SingleGenerator
+
+#### v0.18.3 (2021-04)
+
+- [perf] nazabits: 提高BitReader性能
+- [feat] nazabits: 增加BitReader::SkipBits，SkipBytes函数，用于跳过数据
+- [feat] nazabits: 增加BitReader::AvailBits函数，用于获取剩余可读bit数量
+- [fix] nazaatomic: 匹配平台写错导致重定义
+
+#### v0.18.2 (2021-04)
+
+- [fix] package nazaatomic: mips mipsle两个32位的平台的64位原子整型使用mutex来避免崩溃
+- [feat] package nazalog: Level和AssertBehavior两个枚举类型增加ReadableString返回对应的可读字符串
+
+#### v0.18.1
+
+- [feat] package nazasync:新增的package，其中的Mutex可用于debug锁方面的问题
+
 #### v0.18.0
 
 - [feat] 新增package crypto: 内部包含PKCS5和PKCS7的加密、解密函数，AES CBC的加密、解密函数
